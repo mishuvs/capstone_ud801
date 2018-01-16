@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.weather.wallpaper.forecast">
+
+    <!--exclude tablets in supported devices-->
+    <compatible-screens>
+        <!-- all small size screens -->
+        <screen android:screenSize="small" android:screenDensity="ldpi" />
+        <screen android:screenSize="small" android:screenDensity="mdpi" />
+        <screen android:screenSize="small" android:screenDensity="hdpi" />
+        <screen android:screenSize="small" android:screenDensity="xhdpi" />
+        <!-- all normal size screens -->
+        <screen android:screenSize="normal" android:screenDensity="ldpi" />
+        <screen android:screenSize="normal" android:screenDensity="mdpi" />
+        <screen android:screenSize="normal" android:screenDensity="hdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xhdpi" />
+    </compatible-screens>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon_dark"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon_dark"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Forecast">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAu4U__mr77exRp9Mf65BywYvBTrYGFa60" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.weather.wallpaper.forecast.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.weather.wallpaper.forecast.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.weather.wallpaper.forecast.SettingsActivity"
+            android:parentActivityName="com.weather.wallpaper.forecast.MainActivity"
+            android:screenOrientation="portrait">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.weather.wallpaper.forecast.MainActivity" />
+        </activity>
+
+        <provider
+            android:name="com.weather.wallpaper.forecast.data.WeatherProvider"
+            android:authorities="com.weather.wallpaper.forecast"
+            android:exported="false" />
+
+        <service
+            android:name="com.weather.wallpaper.forecast.sync.WeatherSyncIntentService"
+            android:enabled="true" />
+        <service
+            android:name="com.weather.wallpaper.forecast.sync.WeatherFirebaseJobService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.weather.wallpaper.forecast.DetailActivity"
+            android:parentActivityName="com.weather.wallpaper.forecast.MainActivity"
+            android:screenOrientation="portrait">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.weather.wallpaper.forecast.MainActivity" />
+        </activity>
+
+        <receiver android:name="com.weather.wallpaper.forecast.WeatherWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/weather_widget_info" />
+        </receiver>
+
+        <activity android:name="com.weather.wallpaper.forecast.About"></activity>
+
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
+        <receiver android:name=".sync.AlarmReceiver"/>
+    </application>
+
+</manifest>

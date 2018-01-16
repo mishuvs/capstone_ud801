@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#424242</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#FFD740</color>
+
+    <color name="drawer">#212120</color>
+    <color name="drawer_touch_selector">#424242</color>
+    <color name="toolbar">#212121</color>
+    <color name="splash">#424242</color>
+    <color name="splash_screen">#212121</color>
+    <color name="dialog">#424242</color>
+    <color name="location_dialog_button">#03A9F4</color>
+    <color name="about_background">#424242</color>
+    <color name="about_touch_selector">#212121</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="partiallyTransparentBlack">#60000000</color>
+    <color name="blackOnTouch">#99000000</color>
+
+    <!--original: 212121(toolbar) 424242(splash/about_background)-->
+    <!--set1: 2196F3 03A9F4 (blue)-->
+    <!--set2:-->
+    <!--#2094f0-->
+</resources>

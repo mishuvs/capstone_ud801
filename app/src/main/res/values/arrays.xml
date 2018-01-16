@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="pref_location_choices">
+        <item>Use GPS</item>
+        <item>Enter location manually</item>
+    </string-array>
+
+    <string-array name="pref_location_choices_values">
+        <item>gps</item>
+        <item>manual</item>
+    </string-array>
+
+    <string-array name="pref_units_options">
+        <item>@string/pref_units_label_metric</item>
+        <item>@string/pref_units_label_imperial</item>
+    </string-array>
+
+    <string-array name="pref_units_values">
+        <item>@string/pref_units_metric</item>
+        <item>@string/pref_units_imperial</item>
+    </string-array>
+
+    <string-array name="pref_pressure_units_values">
+        <item>@string/pref_pressure_units_HPa</item>
+        <item>@string/pref_pressure_units_In</item>
+        <item>@string/pref_pressure_units_mmHg</item>
+        <item>@string/pref_pressure_units_Mb</item>
+    </string-array>
+
+    <string-array name="pref_pressure_units_options">
+        <item>@string/pref_pressure_units_HPa_label</item>
+        <item>@string/pref_pressure_units_In_label</item>
+        <item>@string/pref_pressure_units_mmHg_label</item>
+        <item>@string/pref_pressure_units_Mb_label</item>
+    </string-array>
+
+</resources>

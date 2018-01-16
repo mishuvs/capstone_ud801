@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.weather.wallpaper.forecast.About"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/about_background"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/splash"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/drawer_icon_margin_left"
+                android:paddingRight="@dimen/drawer_padding_right"
+                android:gravity="center"
+                >
+                <!--android:background="#1099cc"-->
+
+                <TextView
+                    style="@style/AboutText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/about"/>
+
+                <TextView
+                    android:layout_marginTop="24dp"
+                    style="@style/AboutText"
+                    android:text="@string/version_number"
+                    android:textStyle="bold"/>
+
+                <View style="@style/Divider"/>
+
+                <TextView
+                    android:id="@+id/action_credits"
+                    android:clickable="true"
+                    style="@style/AboutText"
+                    android:text="@string/action_licenses"
+                    android:textStyle="bold"/>
+
+                <View style="@style/Divider"/>
+
+                <TextView
+                    android:id="@+id/terms"
+                    android:clickable="true"
+                    style="@style/AboutText"
+                    android:text="@string/action_terms_and_conditions"
+                    android:textStyle="bold"/>
+
+                <View style="@style/Divider"/>
+
+                <TextView
+                    style="@style/AboutText"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/copyrights_text"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,295 @@
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">The Weather App</string>
+
+    <!-- - - - - - - - - - - - - -->
+    <!-- Used throughout Sunshine-->
+    <!-- - - - - - - - - - - - - -->
+
+    <!--Used in Action Bar, and in AndroidManifest to tell the device the name of this app.-->
+    <!--It's good to keep this short, so your launcher icon isn't displayed with "The greatest Wea"-->
+    <!--or something similar.-->
+
+    <!-- - - - - - - - - - - - - -->
+    <!--Used by SunshineDateUtils-->
+    <!-- - - - - - - - - - - - - -->
+
+    <!-- For labelling today's forecast [CHAR LIMIT=15] -->
+    <string name="today">Today</string>
+
+    <!-- For labelling tomorrow's forecast [CHAR LIMIT=15] -->
+    <string name="tomorrow">Tmrw</string>
+
+    <!-- Date format [CHAR LIMIT=NONE] -->
+    <string name="format_full_friendly_date">
+        <xliff:g id="month">%1$s</xliff:g>, <xliff:g id="day">%2$s</xliff:g>
+    </string>
+
+
+    <!-- - - - - - - - - - - - - - - -->
+    <!-- Used by SunshineWeatherUtils-->
+    <!-- - - - - - - - - - - - - - - -->
+
+    <!-- Temperature format in HPa [CHAR LIMIT=5] -->
+    <string name="format_pressure_hpa">
+        <xliff:g id="pressure">%1.0f</xliff:g> HPa
+    </string>
+
+    <!-- pressure format in In [CHAR LIMIT=5] -->
+    <string name="format_pressure_inches">
+        <xliff:g id="temp">%1.0f</xliff:g> In
+    </string>
+
+    <!-- pressure format in Mb [CHAR LIMIT=5] -->
+    <string name="format_pressure_mb">
+        <xliff:g id="temp">%1.0f</xliff:g> Mb
+    </string>
+
+    <!-- pressure format in mmHg [CHAR LIMIT=5] -->
+    <string name="format_pressure_mmHg">
+        <xliff:g id="temp">%1.0f</xliff:g> mmHg
+    </string>
+
+    <!-- Temperature format in Fahrenheit [CHAR LIMIT=5] -->
+    <string name="format_temperature_fahrenheit">
+        <xliff:g id="temp">%1.0f</xliff:g>\u00B0F
+    </string>
+
+    <!-- Temperature format in Celsius [CHAR LIMIT=5] -->
+    <string name="format_temperature_celsius">
+        <xliff:g id="temp">%1.0f</xliff:g>\u00B0C
+    </string>
+
+    <!-- Wind in kph [CHAR LIMIT=25] -->
+    <string name="format_wind_kmh">
+        <xliff:g id="speed">%1$1.2f</xliff:g> km/h <xliff:g id="direction">%2$s</xliff:g>
+    </string>
+
+    <!-- Wind in mph [CHAR LIMIT=25] -->
+    <string name="format_wind_mph">
+        <xliff:g id="speed">%1$1.2f</xliff:g> mph <xliff:g id="direction">%2$s</xliff:g>
+    </string>
+
+    <!-- Weather Conditions (From OpenWeatherMap) -->
+    <string name="condition_2xx">Storm</string>
+    <string name="condition_3xx">Drizzle</string>
+    <string name="condition_500">Light Rain</string>
+    <string name="condition_501">Moderate Rain</string>
+    <string name="condition_502">Heavy Rain</string>
+    <string name="condition_503">Intense Rain</string>
+    <string name="condition_504">Extreme Rain</string>
+    <string name="condition_511">Freezing Rain</string>
+    <string name="condition_520">Light Shower</string>
+    <string name="condition_521">Shower</string>
+    <string name="condition_522">Heavy Shower</string>
+    <string name="condition_531">Ragged Shower</string>
+    <string name="condition_600">Light Snow</string>
+    <string name="condition_601">Snow</string>
+    <string name="condition_602">Heavy Snow</string>
+    <string name="condition_611">Sleet</string>
+    <string name="condition_612">Shower Sleet</string>
+    <string name="condition_615">Rain and Snow</string> <!-- light rain and snow -->
+    <string name="condition_616">Rain and Snow</string>
+    <string name="condition_620">Shower Snow</string> <!-- light shower snow -->
+    <string name="condition_621">Shower Snow</string>
+    <string name="condition_622">Shower Snow</string> <!-- heavy shower snow -->
+    <string name="condition_701">Mist</string>
+    <string name="condition_711">Smoke</string>
+    <string name="condition_721">Haze</string>
+    <string name="condition_731">Sand, Dust</string>
+    <string name="condition_741">Fog</string>
+    <string name="condition_751">Sand</string>
+    <string name="condition_761">Dust</string>
+    <string name="condition_762">Volcanic Ash</string>
+    <string name="condition_771">Squalls</string>
+    <string name="condition_781">Tornado</string>
+    <string name="condition_800">Clear</string>
+    <string name="condition_801">Mostly Clear</string>
+    <string name="condition_802">Scattered Clouds</string>
+    <string name="condition_803">Broken Clouds</string>
+    <string name="condition_804">Overcast Clouds</string>
+    <string name="condition_900">Tornado</string>
+    <string name="condition_901">Tropical Storm</string>
+    <string name="condition_902">Hurricane</string>
+    <string name="condition_903">Cold</string>
+    <string name="condition_904">Hot</string>
+    <string name="condition_905">Windy</string>
+    <string name="condition_906">Hail</string>
+    <string name="condition_951">Calm</string>
+    <string name="condition_952">Light Breeze</string>
+    <string name="condition_953">Gentle Breeze</string>
+    <string name="condition_954">Breeze</string> <!-- moderate breeze -->
+    <string name="condition_955">Fresh Breeze</string>
+    <string name="condition_956">Strong Breeze</string>
+    <string name="condition_957">High Wind</string>
+    <string name="condition_958">Gale</string>
+    <string name="condition_959">Severe Gale</string>
+    <string name="condition_960">Storm</string>
+    <string name="condition_961">Violent Storm</string>
+    <string name="condition_962">Hurricane</string>
+
+    <string name="condition_unknown">Unknown (<xliff:g id="conditionId">%1$d</xliff:g>)</string>
+    <string name="refresh">refresh</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <!-- - - - - - - - - - - -->
+    <!-- Used by SETTINGS ACTVIITY for preferences-->
+    <!-- - - - - - - - - - - -->
+    <string name="pref_alert_on_precipitation_key" translatable="false">precipitation notification key</string>
+    <string name="pref_alert_on_precipitation_title">Weather Alerts</string>
+
+    <string name="pref_location_choices_default">Enter Location Manually</string>
+    <string name="pref_location_choices_dialog_title">Set Location</string>
+    <string name="pref_location_choices_title">Location</string>
+    <string name="pref_location_choices_key" translatable="false">location preference key</string>
+
+    <string name="pref_is_user_inside_set_location_key" translatable="false">inside</string>
+    <string name="pref_times_user_found_out_key" translatable="false">timesFoundOutside</string>
+
+    <string name="latitude_key" translatable="false">latitude key</string>
+    <string name="longitude_key" translatable="false">longitude key</string>
+    <string name="pref_location_name_key" translatable="false">location name</string>
+    <string name="pref_location_name_default" translatable="false">Not Set</string>
+    <string name="pref_location_name_title">Location</string>
+
+    <!-- - - - - - - - - - - -->
+    <!-- Used by MAIN ACTIVITY for drawer preferences-->
+    <!-- - - - - - - - - - - -->
+    <string name="pref_notifications_enabled_key" translatable="false">notifications enabled</string>
+    <string name="pref_notifications_enabled_title">Notifications</string>
+
+    <!--NONE-->
+
+    <!-- - - - - - - - - - - -->
+    <!-- Used by SETTINGS ACTVIITY for items other than preferences-->
+    <!-- - - - - - - - - - - -->
+    <string name="item_share_settings_activity">Share</string>
+    <string name="item_rate_settings_activity">Rate</string>
+    <string name="item_suggest_settings_activity">Suggest</string>
+
+    <!-- - - - - - - - - - - -->
+    <!-- Used by SETTINGS ACTVIITY for dialogs-->
+    <!-- - - - - - - - - - - -->
+    <string name="city_location_field_label">City name</string>
+    <string name="threaten_exit">Exit WeatherApp?</string>
+    <string name="threaten_exit_negative_button">Exit</string>
+    <string name="set_location">Set Location</string>
+    <string name="threaten_exit_explanation">To provide accurate weather information, WeatherApp needs to know your location.
+        Allow using GPS or enter location manually.</string>
+    <string name="set_location_dialog_title">Set Location</string>
+    <string name="use_gps_location_title">Use GPS</string>
+    <!--NONE-->
+
+    <!-- Error strings -->
+    <string name="not_connected">GoogleApiClient no yet connected. Try again.</string>
+    <string name="geofence_not_available">Geofence service is not available now</string>
+    <string name="geofence_too_many_geofences">Your app has registered too many geofences</string>
+    <string name="geofence_too_many_pending_intents">
+        You have provided too many PendingIntents to the addGeofences() call
+    </string>
+    <string name="unknown_geofence_error">
+        Unknown error: the Geofence service is not available now
+    </string>
+    <string name="geofence_transition_invalid_type">
+        Geofence transition error: invalid transition type %1$d
+    </string>
+    <string name="change_location_notification_title">Update your location</string>
+    <string name="change_location_notification_message">It seems that your location has changed. Help us provide accurate weather info. by updating your location</string>
+    <string name="pref_notification_count" translatable="false">notification count</string>
+    <string name="current_weather_view_height" translatable="false">first view height</string>
+    <string name="full_weather_not_available">Accurate hourly details are available for only the next 5 days from now</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="closeDrawer">Close navigation drawer</string>
+
+    <!-- - - - - - - - - - - -->
+    <!-- Used by NetworkUtils-->
+    <!-- - - - - - - - - - - -->
+    <!--NONE-->
+
+    <!-- - - - - - - - - - - - - - - -->
+    <!-- Used by OpenWeatherJsonUtils-->
+    <!-- - - - - - - - - - - - - - - -->
+    <!--NONE-->
+
+    <!-- - - - - - - - - - - - - - -->
+    <!--Used by WeatherPreferences-->
+    <!-- - - - - - - - - - - - - - -->
+    <!--NONE-->
+
+    <!-- Label for the temperature units preference -->
+    <string name="pref_units_label">Temperature Units</string>
+    <!-- Label for metric option in temperature unit preference -->
+    <string name="pref_units_label_metric">Metric</string>
+    <!-- Label for imperial option in temperature unit preference -->
+    <string name="pref_units_label_imperial">Imperial</string>
+    <!-- Key name for temperature unit preference in SharedPreferences -->
+    <string name="pref_units_key" translatable="false">units</string>
+    <!-- Value in SharedPreferences for metric temperature unit option -->
+    <string name="pref_units_metric" translatable="false">metric</string>
+    <!-- Value in SharedPreferences for imperial temperature unit option -->
+    <string name="pref_units_imperial" translatable="false">imperial</string>
+
+    <string name="pref_pressure_units_key" translatable="false">pressure units</string>
+    <string name="pref_pressure_units_label">Pressure</string>
+    <string name="pref_pressure_units_HPa">Hpa</string>
+    <string name="pref_pressure_units_mmHg">mmHg</string>
+    <string name="pref_pressure_units_In">In</string>
+    <string name="pref_pressure_units_Mb">Mb</string>
+    <string name="pref_pressure_units_HPa_label">Hpa</string>
+    <string name="pref_pressure_units_mmHg_label">mmHg</string>
+    <string name="pref_pressure_units_In_label">In</string>
+    <string name="pref_pressure_units_Mb_label">Mb</string>
+    <string name="images_downloaded_already">images_downloaded_already</string>
+    <string name="condition_5xx">rain</string>
+    <string name="condition_6xx">snow</string>
+    <string name="is_initialized_key" translatable="false">initialized</string>
+    <string name="pref_are_notifications_enabled_key" translatable="false">notifications_enabled</string>
+    <string name="pref_are_alerts_enabled_key" translatable="false">alerts_enabled</string>
+    <string name="action_set_as_wallpaper">Set image as Wallpaper</string>
+    <string name="action_change_location">Change Location</string>
+    <string name="action_share">Share</string>
+    <string name="action_suggest">Suggest</string>
+    <string name="pleasant_weather_message">Pleasant weather :)</string>
+    <string name="notification_harsh_weather_soon">Weather Alert!</string>
+    <string name="notification_weather_today">Good Morning!</string>
+    <string name="notification_debug_string">notification debug string</string>
+    <string name="screen_width">screen width</string>
+    <string name="screen_height">screen height</string>
+    <string name="pref_live_wallpaper_enabled_key" translatable="false">live wallpaper enabled</string>
+    <string name="pref_random_wallpapers_enabled" translatable="false">random wallpaper enabled</string>
+    <string name="pref_random_wallpapers_enabled_title">Use Random Wallpapers</string>
+    <string name="pref_live_wallpaper_enabled_title">Wallpaper Updates</string>
+
+    <string name="app_email_id">weatherapprobux@gmail.com</string>
+    <string name="app_share_message">*Accurate Weather Info and Beautiful Wallpapers* \n
+        Hey! Check out this cool WeatherApp by Robux.\n
+        It shows accurate weather information and mesmerizing wallpapers as well.</string>
+    <string name="time_since_last_update">timeSinceLastUpdate</string>
+    <string name="about">The weather app is the best app in the play store for weather forecasts.
+        Provides users with accurate weather and beautiful mesmerizing wallpapers.\n
+        It also alerts user on harsh or severe weathers like thunderstorm, heavy rain, snow fall, etc.\n
+        A beautiful weather widget can be placed on the home screen to check weather without opening the app.
+    </string>
+    <string name="version_number">Version: 1.0.0</string>
+    <string name="copyrights_text">Copyrights \u00A9 2017</string>
+    <string name="action_licenses">Credits</string>
+    <string name="action_terms_and_conditions">Terms of Use</string>
+
+    <string name="dummy_photo_credits_text">pic by: vaibhav</string>
+    <string name="unsplash_credits">\@Unsplash</string>
+    <string name="buy_app_prompt">Remove Ads</string>
+    <string name="buy_app_message"><![CDATA[Don\'t like ads? Remove ads?]]></string>
+    <string name="buy_app_no">No</string>
+    <string name="buy_app_yes">yes</string>
+    <!--for testing:-->
+    <string name="main_admob_banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="main_admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="detail_admob_banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="detail_admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+    <!--for testing ^-->
+
+    <string name="paid_app_package_name">com.mishu.vaibhav.weatherapp</string>
+    <string name="toast_buy_on_wallpaper_update">Buy the app for beautiful wallpaper updates!</string>
+
+</resources>

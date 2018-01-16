@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- The main content view -->
+        <RelativeLayout
+            android:id="@+id/main_content"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <ImageView
+                android:id="@+id/realImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/blurredImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+                    android:id="@+id/layout_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/toolbar_background">
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/tool_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:id="@+id/toolbarLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            style="@style/Toolbar.TitleText"/>
+
+                    </android.support.v7.widget.Toolbar>
+                </FrameLayout>
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_toolbar">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:clipToPadding="false"
+                        android:id="@+id/today_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="50dp"/>
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+                <LinearLayout
+                    android:id="@+id/empty_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="invisible"/>
+
+                    <Button
+                        android:id="@+id/refresh_when_error_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="refresh"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="No internet connection found!"
+                        android:textColor="@color/material_color_black_54_percent"/>
+                </LinearLayout>
+
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/main_admob_banner_id">
+                </com.google.android.gms.ads.AdView>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/splash_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </FrameLayout>
+
+            <!--<Button-->
+            <!--android:id="@+id/datamanagerButton"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="datamanager"/>-->
+        </RelativeLayout>
+        <!-- The navigation drawer -->
+
+        <RelativeLayout
+            android:id="@+id/left_drawer"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/drawer" >
+
+            <!--TODO: add zeus' image-->
+            <!--grouping the 3 items in one-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/drawer_icon_margin_left"
+                android:paddingRight="@dimen/drawer_padding_right"
+                >
+                <!--android:background="#1099cc"-->
+
+                <TextView
+                    android:id="@+id/action_change_location"
+                    android:clickable="true"
+                    style="@style/DrawerText"
+                    android:drawableStart="@drawable/ic_edit_location_white_24dp"
+                    android:text="@string/action_change_location"/>
+
+                <View style="@style/Divider"/>
+
+                <TextView
+                    android:id="@+id/action_set_wallpaper"
+                    android:clickable="true"
+                    style="@style/DrawerText"
+                    android:drawableStart="@drawable/ic_wallpaper_white_24dp"
+                    android:text="@string/action_set_as_wallpaper"/>
+
+                <View style="@style/Divider"/>
+
+                <!--WARNING ENABLED-->
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/alert_enabled"
+                    android:text="@string/pref_alert_on_precipitation_title"
+                    android:key="@string/pref_alert_on_precipitation_key"
+                    style="@style/DrawerText"
+                    android:drawableStart="@drawable/ic_warning_white_24dp"/>
+
+                <View style="@style/Divider"/>
+
+                <!--LIVE WALLPAPER ENABLED-->
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/wallpaper_enabled"
+                    android:text="@string/pref_live_wallpaper_enabled_title"
+                    style="@style/DrawerText"
+                    android:drawableStart="@drawable/ic_wallpaper_white_24dp"/>
+
+                <View style="@style/Divider"/>
+
+                <TextView
+                    android:id="@+id/action_share"
+                    android:clickable="true"
+                    style="@style/DrawerText"
+                    android:drawableStart="@drawable/ic_share_white_24dp"
+                    android:text="@string/action_share"/>
+
+                <View style="@style/Divider"/>
+
+                <TextView
+                    android:id="@+id/action_suggest"
+                    android:clickable="true"
+                    style="@style/DrawerText"
+                    android:drawableStart="@drawable/ic_feedback_white_24dp"
+                    android:text="@string/action_suggest"/>
+
+                <View style="@style/Divider"/>
+
+                <TextView
+                    android:id="@+id/action_about"
+                    android:clickable="true"
+                    style="@style/DrawerText"
+                    android:drawableStart="@drawable/ic_info_white_24dp"
+                    android:text="About"/>
+
+                <View style="@style/Divider"/>
+
+                <TextView
+                    android:id="@+id/action_drawer_settings"
+                    android:clickable="true"
+                    style="@style/DrawerText"
+                    android:drawableStart="@drawable/ic_settings_white_24dp"
+                    android:text="@string/action_settings"
+                    android:onClick="openSettings"/>
+
+                <TextView
+                    android:id="@+id/action_buy_app"
+                    android:clickable="true"
+                    style="@style/DrawerText"
+                    android:drawableStart="@drawable/ic_local_atm_white_24dp"
+                    android:text="@string/buy_app_prompt"/>
+
+                <!--<View style="@style/Divider"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/debug_notifications_activity"-->
+                    <!--android:clickable="true"-->
+                    <!--style="@style/DrawerText"-->
+                    <!--android:text="@string/notification_debug_string"/>-->
+
+
+                <!--<TextView-->
+                    <!--android:id="@+id/android_database_manager"-->
+                    <!--android:clickable="true"-->
+                    <!--style="@style/DrawerText"-->
+                    <!--android:text="android database manager"/>-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+</layout>
