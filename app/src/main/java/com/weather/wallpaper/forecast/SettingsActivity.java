@@ -268,7 +268,7 @@ public class SettingsActivity extends AppCompatActivity implements
         if (status.isSuccess()) {
             Toast.makeText(
                     this,
-                    "Geofences Added",
+                    getString(R.string.toast_geofence_added),
                     Toast.LENGTH_SHORT
             ).show();
         } else {
@@ -322,7 +322,7 @@ public class SettingsActivity extends AppCompatActivity implements
             findPreference(getString(R.string.item_rate_settings_activity)).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    Toast.makeText(getActivity(), "Instead of toast, a link to paid app will open", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getString(R.string.redirect_to_paid_app), Toast.LENGTH_SHORT).show();
                     return true;
                 }
             });

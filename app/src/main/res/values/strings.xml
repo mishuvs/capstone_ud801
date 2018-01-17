@@ -291,5 +291,41 @@
 
     <string name="paid_app_package_name">com.mishu.vaibhav.weatherapp</string>
     <string name="toast_buy_on_wallpaper_update">Buy the app for beautiful wallpaper updates!</string>
+    <string name="content_description_DetailActivity_background_image">background image</string>
+    <string name="content_description_DetailActiivty_set_wallpaper_action">set wallpaper action</string>
+    <string name="content_description_DetailActiivty_humidity_icon">humidity icon</string>
+    <string name="content_description_DetailActiivty_wind_icon">wind icon</string>
+    <string name="content_description_DetailActiivty_pressure_icon">pressure icon</string>
+    <string name="content_description_DetailActiivty_maximum_temperature_arrow">maximum temperature arrow</string>
+    <string name="content_description_DetailActiivty_weather_descriptive_icon">weather descriptive icon</string>
+    <string name="content_description_DetailActiivty_minimum_temperature_arrow">minimum temperature arrow</string>
+    <string name="textview_string_DetailActivity_humidity">Humidity</string>
+    <string name="textview_string_DetailActivity_wind">Wind</string>
+    <string name="textview_string_DetailActivity_">Pressure</string>
+    <string name="textview_string_DetailActivity_date">TextView</string>
+    <string name="textview_string_DetailActivity_weather_description">weather description</string>
+    <string name="content_description_MainActivity_background_image">background image</string>
+    <string name="textview_string_MainActivity_refresh">refresh</string>
+    <string name="textview_string_MainActivity_connection_error">No internet connection found!</string>
+    <string name="textview_MainActivity_action_about">About</string>
+    <string name="content_description_ForecastItem_weather_icon">weather icon</string>
+    <string name="content_description_ForecastItem_max_temp">max temperature up arrow</string>
+    <string name="content_description_ForecastItem_min_temp_icon">min temperature down arrow</string>
+    <string name="textview_ForecastItem_photo_credits">photo by:</string>
+    <string name="content_description_HoursItem_weather_icon">weather icon</string>
+    <string name="content_description_widget_weather_icon">weather_icon</string>
+    <string name="content_description_widget_up_arrow">up arrow</string>
+    <string name="content_description_Widget_down_arrow">down arrow</string>
+    <string name="content_description_WeekItem_weather_icon">weather icon</string>
+    <string name="content_description_WeekItem_up_arrow">up arrow</string>
+    <string name="content_description_WeekItem_down_arrow">down arrow</string>
+    <string name="textview_location_prompt_dialog_OR">OR</string>
+    <string name="toolbar_connection_error_location_name">No Name... Check connection</string>
+    <string name="weather_up_to_date">Weather Data Up To Date!</string>
+    <string name="toast_geofence_added">Geofences Added!</string>
+    <string name="toast_prompt_try_again">please try again! :(</string>
+    <string name="toast_wallpaper_set_successfully">wallpaper set successfully</string>
+    <string name="prompt_enable_notifications_first">turn on notifications first</string>
+    <string name="redirect_to_paid_app">Instead of toast, a link to paid app will open</string>
 
 </resources>

@@ -279,7 +279,7 @@ public class MainActivity extends AppCompatActivity implements
                     public void onRefresh() {
                         long sinceLastSync = SunshineDateUtils.timeSinceLastUpdated(MainActivity.this);
                         if(sinceLastSync <= 1800){
-                            Toast.makeText(MainActivity.this,"Weather Data Up To Date ",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,getString(R.string.weather_up_to_date),Toast.LENGTH_SHORT).show();
                             mySwipeRefresh.setRefreshing(false);
                             return;
                         }
@@ -360,7 +360,7 @@ public class MainActivity extends AppCompatActivity implements
                     //if notifications aren't enabled... you can't turn harsh weather alerts on
                     if(!sharedPref.getBoolean(getString(R.string.pref_notifications_enabled_key),true)) {
                         mainBinding.alertEnabled.setChecked(false);
-                        Toast.makeText(MainActivity.this,"turn on notifications first",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,getString(R.string.prompt_enable_notifications_first),Toast.LENGTH_SHORT).show();
                         return;
                     }
                 }
@@ -434,7 +434,7 @@ public class MainActivity extends AppCompatActivity implements
             location = LocationUtils.getPlaceName(this,latitude,longitude);
         }
         if(location==null){
-            toolbarLocation.setText("No Name... Check connection");
+            toolbarLocation.setText(R.string.toolbar_connection_error_location_name);
         } else toolbarLocation.setText(location);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -686,7 +686,7 @@ public class MainActivity extends AppCompatActivity implements
         }
 
         private static void buyApp(Context context){
-            Toast.makeText(context, "Redirect user to paid app", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getString(R.string.redirect_to_paid_app), Toast.LENGTH_SHORT).show();
         }
     }
 

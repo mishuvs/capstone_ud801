@@ -116,7 +116,7 @@ public class WallpaperUtils {
         if(realImageDrawable instanceof TransitionDrawable && context instanceof MainActivity) {
             runOnUiThread(new Runnable() {
                 public void run(){
-                    Toast.makeText(context.getApplicationContext(),"please try again",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context.getApplicationContext(),context.getString(R.string.toast_prompt_try_again),Toast.LENGTH_SHORT).show();
                 }
             });
             return;
@@ -134,7 +134,7 @@ public class WallpaperUtils {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(context, "wallpaper set successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, context.getString(R.string.toast_wallpaper_set_successfully), Toast.LENGTH_SHORT).show();
                     }
                 });
             }

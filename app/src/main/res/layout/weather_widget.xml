@@ -42,7 +42,8 @@
                     android:id="@+id/icon"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginEnd="8dp"/>
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/content_description_widget_weather_icon" />
 
                 <TextView
                     android:id="@+id/description"
@@ -80,7 +81,8 @@
                     android:layout_width="12dp"
                     android:layout_height="30dp"
                     android:layout_gravity="top"
-                    android:layout_marginEnd="4dp"/>
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/content_description_widget_up_arrow" />
                 <TextView
                     android:id="@+id/maxTemp"
                     style="@style/WidgetMedium"
@@ -99,7 +101,8 @@
                     android:layout_width="12dp"
                     android:layout_height="30dp"
                     android:layout_gravity="top"
-                    android:layout_marginEnd="4dp"/>
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/content_description_Widget_down_arrow" />
                 <TextView
                     android:id="@+id/minTemp"
                     style="@style/WidgetMedium"

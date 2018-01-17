@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="OR"
+        android:text="@string/textview_location_prompt_dialog_OR"
         android:textSize="16sp"
         android:textStyle="italic"
         android:layout_marginTop="20dp"
