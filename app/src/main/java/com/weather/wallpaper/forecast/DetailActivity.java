@@ -198,7 +198,7 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
 
         //HUMIDITY:
         index = data.getColumnIndex(DETAIL_FORECAST_PROJECTION[8]);
-        mBinding.humidity.setText(Integer.toString(data.getInt(index)) + " %");
+        mBinding.humidity.setText(String.format("%s %%", Integer.toString(data.getInt(index))));
 
         //WIND:
         index = data.getColumnIndex(DETAIL_FORECAST_PROJECTION[9]);

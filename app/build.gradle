@@ -14,7 +14,7 @@ android {
 
     signingConfigs {
         release {
-            keyAlias 'udacityCapstone'
+            keyAlias 'udacity_capstone_key'
             keyPassword '#udacityCapstoneKey'
             storeFile file('capstone_keystore.jks')
             storePassword '#udacityCapstone'
@@ -41,7 +41,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:11.0.4'
     compile 'blue.aodev:material-values:1.1.1'
     compile 'com.github.bumptech.glide:glide:4.1.1'
-    compile 'com.google.android.gms:play-services-auth:11.0.4'
     compile 'com.google.android.gms:play-services-places:11.0.4'
     compile 'com.google.android.gms:play-services-location:11.0.4'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'

@@ -76,7 +76,7 @@ public class ImageUtils extends AppGlideModule{
 //                            setBlurredImage(realImage.getContext(),resource,blurredImage);
 //                        }
                         realImage.setImageDrawable(resource);
-                        setBlurredImage(realImage.getContext(),resource,blurredImage);
+//                        setBlurredImage(realImage.getContext(),resource,blurredImage);
                         return true;
                     }
                 })
